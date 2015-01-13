@@ -459,6 +459,10 @@ function countyChoroMap($scope, countyName, width, height, countyId, stateId) {
           .call(function() {if (selectedState) { stateClick(selectedState[0]);}});
 
     }
+    else
+    if ($scope.stateId) {
+      $('body').addClass("county");
+    }
     else {
 
       $scope.g.append("g")
@@ -471,7 +475,6 @@ function countyChoroMap($scope, countyName, width, height, countyId, stateId) {
         .on("click", stateClick)
         .call(function() {if (selectedState) { stateClick(selectedState[0]);}});
 
-      $('body').addClass("county");
       var selectedCounty = $scope.counties.filter(function(county) { if (county.id == countyId) {return county};});
       $scope.g.append("g")
         .attr("id", "counties")
