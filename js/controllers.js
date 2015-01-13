@@ -459,10 +459,13 @@ function countyChoroMap($scope, countyName, width, height, countyId, stateId) {
           .call(function() {if (selectedState) { stateClick(selectedState[0]);}});
 
     }
-    else if ($scope.countyId) {
-      $('body').addClass("county");
-    }
     else {
+      if ($scope.countyId) {
+        $('body').addClass("county");
+        $('#navigate').hover(function(){
+          $("#tooltip").hide();
+        });
+      }
 
       $scope.g.append("g")
       .attr("id", "states")
