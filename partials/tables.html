@@ -12,7 +12,7 @@
 <div id="count-table-outer">
   <table id="count-table" ng-table="CountTable" class="table table-bordered table-striped">
     <tr ng-repeat="record in $data">
-      <td data-title="'County'"><a href="#county/{{record.countyid}}">{{record.countyname}}</a></td>
+      <td width="200" data-title="'County'"><a href="#county/{{record.countyid}}">{{record.countyname}}</a></td>
       <td class="comment" data-title="Comments"><a county-id="{{record.countyid}}" class="county-link" href="#county/{{record.countyid}}"><div class="chart"><div style="width: {{record.width}}px;">{{record.count}}</div></div></a></div></td>
     </tr>
   </table>
@@ -20,7 +20,7 @@
 <div id="percent-table">
   <table  ng-table="PercentTable" class="table table-bordered table-striped">
     <tr ng-repeat="record in $data">
-      <td data-title="'County'"><a county-id="{{record.countyid}}" class="county-link" href="#county/{{record.countyid}}">{{record.countyname}}</a></td>
+      <td width="200" data-title="'County'"><a county-id="{{record.countyid}}" class="county-link" href="#county/{{record.countyid}}">{{record.countyname}}</a></td>
       <td data-title="'Percent'"><a county-id="{{record.countyid}}" class="county-link" href="#county/{{record.countyid}}"><div class="chart"><div style="width: {{record.width}}px;">{{record.percent}}</div></div></a></div></td>
     </tr>
   </table>
@@ -38,7 +38,7 @@
 <div id="state-percent-table">
   <table  ng-table="stateCountTable" class="table table-bordered table-striped">
     <tr ng-repeat="record in $data">
-      <td data-title="'State'"><a state-id="{{record.state}}" class="county-link" href="#state/{{record.state}}">{{record.state}}</a></td>
+      <td width="200" data-title="'State'"><a state-id="{{record.state}}" class="county-link" href="#state/{{record.state}}">{{record.state}}</a></td>
       <td data-title="'Comments'"><a state-id="{{record.state}}" class="county-link" href="#state/{{record.state}}"><div class="chart"><div style="width: {{record.width}}px;">{{record.rate}}</div></div></a></div></td>
     </tr>
   </table>
